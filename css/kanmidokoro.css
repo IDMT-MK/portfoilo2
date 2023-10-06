@@ -742,8 +742,11 @@ div.footer{
     }
 
     div.hyou {
-        width: 70%;
-        margin-left: 3%;
+        width: 60%;
+        margin: auto;
+    }
+    div.usedlist2 {
+        margin-left: 22%;
     }
 
     div.complete {
@@ -769,6 +772,11 @@ div.footer{
     .slick-slide img {
         width: 70%;
     }
+
+    div.katei {
+        padding-top: 3rem;
+    }
+
     div.purpose {
         padding: 15px 60px 15px 60px;
         border-right-width: 20px;

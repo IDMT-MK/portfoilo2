@@ -977,8 +977,12 @@ div.footer{
     }
 
     div.hyou {
-        width: 70%;
-        margin-left: 2%;
+        width: 60%;
+        margin: auto;
+    }
+
+    div.usedlist2 {
+        margin-left: 47%;
     }
 
     div.research {
@@ -1011,7 +1015,7 @@ div.footer{
        width: 50%;
     }
     div.simbol h4 {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 
     div.logotype {
@@ -1023,7 +1027,11 @@ div.footer{
        width: 50%;
     }
     div.logotype h4 {
-        font-size: 0.5rem;
+        font-size: 1rem;
+    }
+
+    div.katei {
+        padding-top: 3rem;
     }
 
     div.purpose {

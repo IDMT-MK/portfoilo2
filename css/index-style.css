@@ -717,15 +717,13 @@ input, textarea {
 
     div.forms {
         width: 300px;
-        margin-left: -160%;
     }
     div.contact {
-        padding: 5rem 10rem;
+        padding: 5rem 20px;
     }
 
     div.contact h1 {
         margin: auto;
-        margin-left: -85%;
     }
 
     div.formscontact {

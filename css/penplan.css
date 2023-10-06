@@ -909,8 +909,11 @@ div.main {
 }
 
 div.hyou {
-    width: 70%;
-    margin-left: 3%;
+    width: 60%;
+    margin: auto;
+}
+div.usedlist2 {
+    margin-left: 20%;
 }
 div.artifact li {
     margin-left: 10%;
@@ -958,6 +961,10 @@ div.sitemap1 h4 {
 
 .slick-slide img {
     width: 70%;
+}
+
+div.katei {
+    padding-top: 3rem;
 }
 
 div.purpose {
