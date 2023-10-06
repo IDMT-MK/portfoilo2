@@ -1,0 +1,803 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+    left: 0%;
+	z-index: 1440;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 1440;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	width: 100%;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+#splash_text svg{
+    height: 2px;
+}
+
+/*割れる画面のアニメーション*/
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: #6461ff;
+    transition: all .2s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+/*上の画面*/
+.loader_cover-up {
+    transform-origin: center top;
+}
+
+/*下の画面*/
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+/*クラス名がついたらY軸方向に0*/
+
+.coveranime {
+    transform: scaleY(0);
+}
+
+#home {
+    background-color: #6461FF;
+}
+
+
+.main-nav{
+    display: flex;
+    flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+    margin:0 0 50px 0;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.main-nav li a{
+    display: block;
+    padding: 2rem 2rem 0.2rem 2rem;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.main-nav li{
+    margin-bottom:20px;
+}
+
+/*5-3-1 中心から外に線が伸びる（下部）*/
+
+.main-nav li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background:#000;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.main-nav li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+h2{
+    margin-top: 2%;
+    text-align: center;
+    color: #000;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1%;
+}
+
+.logo{
+    margin: auto;
+    display: block;
+    width: 40%;
+    height: auto;
+}
+
+.page header{
+    display: flex;
+}
+
+header figure{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+header figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.hyou2 {
+    margin-top: 2%;display: grid;
+    place-items: center;
+}
+
+div.hyou {
+    margin-left: 5%;
+}
+
+div.ue {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+div.artifact {
+    display: flex;
+    width: 360px;
+}
+
+div.artifact h6 {
+    text-align: left;
+    vertical-align: top;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+div.artifact p {
+    text-align: left;
+    vertical-align: top;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    white-space: nowrap;
+    margin-left: 10%;
+}
+
+div.used {
+    display: flex;
+    width: 360px;
+}
+
+div.used h6 {
+    text-align: left;
+    vertical-align: top;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+div.usedlist2 {
+    margin-left: 30%;
+}
+
+div.used p {
+    text-align: left;
+    vertical-align: top;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    white-space: nowrap;
+    margin-left: 6%;
+}
+
+div.sita {
+    display: flex;
+}
+
+div.target {
+    display: flex;
+    width: 360px;
+}
+
+div.target h6 {
+    text-align: left;
+    vertical-align: top;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+div.target p {
+    text-align: left;
+    vertical-align: top;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    white-space: nowrap;
+    margin-left: 13%;
+}
+
+div.creation {
+    display: flex;
+    width: 360px;
+}
+
+div.creation h6 {
+    text-align: left;
+    vertical-align: top;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+div.creation p {
+    text-align: left;
+    vertical-align: top;
+    width: 80%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    margin-left: 10%;
+}
+
+div.main{
+    padding: 10rem 0rem 2rem 0rem;
+    background-color: #F6A9FD;
+    position: relative;
+}
+
+.main::before {
+     content: "";
+     display: block;
+     background-image: url("../images/header1.png");
+     background-size: 100% auto;
+     background-position: top center;
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 940px;
+     position: absolute;
+     top: 0;
+     left: 0;
+}
+
+div.complete{
+    background-color: #fff;
+    border-radius: 30px;
+    width: 70%;
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-top: 20%;
+}
+
+div.magazinimg{
+    display: flex;
+    gap: 2%;
+    height: auto;
+    padding: 30px;
+}
+
+.magazin {
+    width: 50%;
+    height: auto;
+}
+
+div.complete p{
+    text-align: left;
+    padding: 1% 5% 5%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+}
+
+div.layout {
+    padding: 30px;
+    width: 40%;
+    background-color: #fff;
+    border-radius: 80px;
+    border-style: solid;
+    border-top-width: 10px;
+    border-right-width: 25px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-color: #000;
+    margin: 10% auto 2%;
+}
+
+div.layout h4{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+}
+
+div.layout2 {
+    background-color: #fff;
+    border-radius: 30px;
+    width: 70%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+div.layoutimg{
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    padding: 30px;
+}
+
+.layoutimg2 {
+    width: 100%;
+    height: auto;
+}
+
+div.layout2 p{
+    text-align: left;
+    padding: 1% 5% 5%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+
+.slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
+    margin-top: 13%;
+    margin-bottom: 13%;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+    margin:0 10px;/*スライド左右の余白調整*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+div.loop_wrap{
+    background:#000;
+  }
+  
+ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+  
+  a:hover,
+  a:active{
+    text-decoration: none;
+}
+
+div.katei {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background: #D3B0FF;
+}
+
+div.purpose  {
+    padding: 50px 80px 50px 80px;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 60px;
+    border-style: solid;
+    border-top-width: 10px;
+    border-right-width: 25px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-color: #000;
+    margin: 10% auto 2%;
+}
+
+div.purpose h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0% 5% 2% 5%;
+}
+
+div.purpose p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+div.concept {
+    padding: 50px 80px 50px 80px;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 60px;
+    border-style: solid;
+    border-top-width: 10px;
+    border-right-width: 25px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-color: #000;
+    margin: 10% auto 2%;
+}
+
+div.concept h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0% 5% 2% 5%;
+}
+
+div.concept p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+div.proces {
+    background-color: #fff;
+    border-radius: 30px;
+    width: 60%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+div.proces h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    padding: 5% 5% 0% 5%;
+}
+
+div.proces img {
+    width: 80%;
+    height: auto;
+    padding: 30px;
+}
+
+div.footer{
+    background-image: url("../images/footer.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: #D3B0FF;
+}
+
+div.footer{
+    background-image: url("../images/footer.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.footer-nav{
+    display: flex;
+    flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+    list-style: none;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.footer-nav li a{
+    display: block;
+    padding: 2rem 2rem 0.2rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.footer-nav li{
+    margin-bottom:20px;
+}
+
+/*5-3-1 中心から外に線が伸びる（下部）*/
+
+.footer-nav li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background:#fff;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.footer-nav li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+.logo2{
+    margin: 2% 45% 0% 45%;
+    width: 10%;
+    height: 10%;
+}
+.gototop {
+    position: absolute;
+    top: -50px;
+    right: 13%;
+    filter: drop-shadow(3px 3px 3px #000);
+    background: #FF55A5;
+    border-radius: 50%;
+    padding:20px 30px;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 128, 128, 0.1) ;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+
+.gototop:hover {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4), 0 0 60px rgba(128, 128, 128, 0.1) ;
+    border-color: transparent;
+}
+
+/*==================================================
+ふわっ
+===================================*/
+
+
+/* fadeUp */
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+@keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+    
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+    
+.fadeUpTrigger{
+    opacity: 0;
+}
+
+/* media queries */
+@media screen and (max-width: 800px) {
+    .main-nav {
+        font-size: 0.8rem;
+        justify-content: center;
+    }
+
+    div.hyou2 {
+        justify-content: center;
+    }
+    div.artifact p {
+        margin-left: 6%;
+    }
+
+    div.ue {
+        display: flex;
+        gap: 15%;
+    }
+
+    div.sita {
+        display: flex;
+        gap: 15%;
+    }
+
+    div.artifact {
+        width: 270px;
+    }
+
+    div.artifact h6 {
+        font-size: 0.5rem;
+    }
+
+    div.artifact p {
+        font-size: 10px;
+    }
+
+    div.used {
+        width: 270px;
+    }
+
+    div.used p {
+        font-size: 10px;
+    }
+
+    div.adobe img{
+        width: 30%;
+    }
+
+    div.used h6 {
+        font-size: 0.5rem;
+    }
+
+    div.used li {
+        font-size: 10px;
+    }
+
+    div.target {
+        width: 270px;
+    }
+
+    div.target h6 {
+        font-size: 0.5rem;
+    }
+
+    div.target p {
+        font-size: 10px;
+    }
+
+    div.creation {
+        width: 270px;
+    }
+
+    div.creation h6 {
+        font-size: 0.5rem;
+    }
+
+    div.complete p {
+        font-size: 8px;
+    }
+
+    div.layout {
+        padding: 20px;
+    }
+
+    div.layout2 p {
+        font-size: 8px;
+    }
+
+    div.creation p {
+        font-size: 10px;
+    }
+
+    div.purpose h4 {
+        font-size: 1.2rem;
+    }
+
+    div.purpose p {
+        font-size: 8px;
+    }
+
+    div.concept p {
+        font-size: 8px;
+    }
+
+    div.concept h4 {
+        font-size: 1.2rem;
+    }
+
+    div.proces h4 {
+        font-size: 1.2rem;
+    }
+
+    .button2 {
+        width: 60%;
+        height: auto;
+    }
+
+    .gototop {
+        right: 1%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    div.main {
+        padding: 7rem 1.5rem;
+    }
+
+    div.hyou {
+        width: 70%;
+        margin-left: 3%;
+    }
+
+    div.complete {
+        width: 100%;
+    }
+
+    div.layout2 {
+        width: 100%;
+    }
+
+    div.layout {
+        padding: 10px;
+        border-right-width: 13px;
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+        border-left-width: 5px;
+        width: 50%;
+    }
+    div.layout h4 {
+        font-size: 0.5rem;
+    }
+
+    .slick-slide img {
+        width: 70%;
+    }
+    div.purpose {
+        padding: 15px 60px 15px 60px;
+        border-right-width: 20px;
+    }
+    div.concept {
+        padding: 15px 60px 15px 60px;
+        border-right-width: 20px;
+        border-radius: 50px;
+    }
+    div.proces {
+        width: 80%;
+    }
+    .footer-nav {
+        padding-bottom: 0rem;
+    }
+    
+    .gototop {
+        padding: 15px 5px;
+        margin-right: 5%;
+    }
+    
+    .button2 {
+        width: 60%;
+        margin-left: 18%;
+    }
+    
+    .logo2 {
+        width: 20%;
+        height: auto;
+        margin: 2% 50% 0% 40%;
+    }
+}

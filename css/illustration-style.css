@@ -1,0 +1,369 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    z-index: 1440;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1440;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+#splash_text svg {
+    height: 2px;
+}
+
+/*割れる画面のアニメーション*/
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: #6461ff;
+    transition: all .2s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+
+/*上の画面*/
+.loader_cover-up {
+    transform-origin: center top;
+}
+
+/*下の画面*/
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+
+/*クラス名がついたらY軸方向に0*/
+
+.coveranime {
+    transform: scaleY(0);
+}
+
+#home {
+    background-color: #6461FF;
+    padding-bottom: 5%;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    /*スマホ表示折り返し用なのでPCのみなら不要*/
+    margin: 0 0 50px 0;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.main-nav li a {
+    display: block;
+    padding: 2rem 2rem 0.2rem 2rem;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.main-nav li {
+    margin-bottom: 20px;
+}
+
+/*5-3-1 中心から外に線が伸びる（下部）*/
+
+.main-nav li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #000;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: center top;
+    /*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.main-nav li a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+
+
+
+h2 {
+    margin-top: 2%;
+    text-align: center;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+}
+
+.page header {
+    display: flex;
+}
+
+
+div.illust {
+    padding: 10rem 1.5rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.illust::before {
+    content: "";
+    display: block;
+    background-image: url("../images/header1.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 940px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery {
+    columns: 3;
+    /*段組みの数*/
+    padding: 5%;
+    /*ギャラリー左右に余白をつける*/
+    margin-top: 10%;
+}
+
+.gallery li {
+    margin-bottom: 20px;
+    /*各画像下に余白をつける*/
+    list-style: none;
+}
+
+/*ギャラリー内のイメージは横幅100%にする*/
+.gallery img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    /*画像の下にできる余白を削除*/
+}
+
+/*　横幅900px以下の段組み設定　*/
+@media only screen and (max-width: 900px) {
+    .gallery {
+        columns: 3;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .gallery {
+        columns: 2;
+    }
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #333;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 6vw;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+p {
+    margin: 0 10px 10px 10px;
+    word-wrap: break-word;
+}
+
+/*画像を出現させるアニメーションCSS*/
+
+.flipLeft {
+    animation-name: flipLeft;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    perspective-origin: left center;
+    opacity: 0;
+}
+
+@keyframes flipLeft {
+    from {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+div.footer {
+    background-image: url("../images/footer.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    /*スマホ表示折り返し用なのでPCのみなら不要*/
+    list-style: none;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.footer-nav li a {
+    display: block;
+    padding: 2rem 2rem 0.2rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.footer-nav li {
+    margin-bottom: 20px;
+}
+
+/*5-3-1 中心から外に線が伸びる（下部）*/
+
+.footer-nav li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: center top;
+    /*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.footer-nav li a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+
+.logo2 {
+    margin: 2% 45% 0% 45%;
+    width: 10%;
+    height: 10%;
+}
+
+.gototop {
+    position: absolute;
+    top: -50px;
+    right: 13%;
+    filter: drop-shadow(3px 3px 3px #000);
+    background: #FF55A5;
+    border-radius: 50%;
+    padding: 20px 30px;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 128, 128, 0.1);
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+
+.gototop:hover {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4), 0 0 60px rgba(128, 128, 128, 0.1);
+    border-color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+
+    .main-nav {
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    .footer-nav {
+        padding-bottom: 0rem;
+    }
+
+    .gototop {
+        padding: 15px 5px;
+    }
+
+    .button2 {
+        width: 60%;
+        margin-left: 18%;
+    }
+
+    .logo2 {
+        width: 20%;
+        height: auto;
+        margin: 2% 50% 0% 40%;
+    }
+}
