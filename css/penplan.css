@@ -908,9 +908,20 @@ div.main {
     padding: 7rem 1.5rem;
 }
 
+.main-nav {
+    margin: 0 0 30px 0;
+}
+
+.main-nav li {
+    margin-bottom: 0;
+}
+
 div.hyou {
     width: 60%;
     margin: auto;
+}
+div.hyou2 {
+    margin-top: 5%;
 }
 div.usedlist2 {
     margin-left: 20%;
@@ -919,6 +930,12 @@ div.artifact li {
     margin-left: 10%;
 }
 
+div.complete {
+    width: 100%;
+}
+div.mark {
+    width: 100%;
+}
 div.symbol {
     padding: 10px;
     border-right-width: 13px;
@@ -942,6 +959,12 @@ div.wireframe2 h4 {
 }
 .wireimg {
     width: 80%;
+}
+div.wireframe3 {
+    width: 100%;
+}
+div.sitemap2 {
+    width: 100%;
 }
 
 div.sitemap{

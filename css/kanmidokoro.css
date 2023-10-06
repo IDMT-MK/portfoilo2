@@ -741,9 +741,19 @@ div.footer{
         padding: 7rem 1.5rem;
     }
 
+    .main-nav li {
+        margin-bottom: 0;
+    }
+    .main-nav {
+        margin: 0 0 30px 0;
+    }
+    
     div.hyou {
         width: 60%;
         margin: auto;
+    }
+    div.hyou2 {
+        margin-top: 5%;
     }
     div.usedlist2 {
         margin-left: 22%;
