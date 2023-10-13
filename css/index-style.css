@@ -389,7 +389,6 @@ div.worklist{
   
   .hover-mask p {
     width: 80%; /* テキストを横幅いっぱいにならないようにする */
-    font-family: 'Inter', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
   }
 
@@ -410,7 +409,6 @@ div.contact h1{
 }
 
 div.footer{
-    background-image: url("../images/footer.png");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -418,11 +416,9 @@ div.footer{
     background-color: #D3B0FF;
 }
 
-div.footer{
-    background-image: url("../images/footer.png");
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
+div.footerhead {
+    background-color: #6461FF;
+    border-radius: 70px 70px 0 0;
     position: relative;
 }
 
@@ -432,6 +428,7 @@ div.footer{
     list-style: none;
     justify-content: center;
     padding-bottom: 2rem;
+    background-color: #6461FF;
 }
 
 .footer-nav li a{
@@ -665,10 +662,12 @@ input, textarea {
 
         .button2 {
             width: 60%;
+            margin-left: 19%;
         }
 
         .gototop {
-            right: 1%;
+            padding: 20px 10px;
+            margin-right: 5%;
         }
 
     }
@@ -693,6 +692,9 @@ input, textarea {
     div.about {
         padding: 5rem 1.5rem;
     }
+    .main-nav { 
+        margin: 0 0 20px 0;
+    }
 
     div.profile {
         padding-top: 0rem;
@@ -703,7 +705,9 @@ input, textarea {
     div.sita{
         gap: 0;
     }
-
+    .hover-mask {
+        font-size: 0.5rem;
+    }
     div.icon img {
         width: 100%;
         height: auto;
@@ -729,13 +733,16 @@ input, textarea {
     div.formscontact {
         justify-content: center;
     }
+    div.footerhead {
+        border-radius: 40px 40px 0 0;
+    }
     .footer-nav {
         padding-bottom: 0rem;
     }
 
     .gototop {
         padding: 15px 5px;
-        margin-right: 5%;
+        margin-right: 0%;
     }
 
     .button2 {

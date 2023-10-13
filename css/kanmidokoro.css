@@ -494,7 +494,6 @@ div.proces img {
 }
 
 div.footer{
-    background-image: url("../images/footer.png");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -502,11 +501,9 @@ div.footer{
     background-color: #D3B0FF;
 }
 
-div.footer{
-    background-image: url("../images/footer.png");
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
+div.footerhead {
+    background-color: #6461FF;
+    border-radius: 70px 70px 0 0;
     position: relative;
 }
 
@@ -516,6 +513,17 @@ div.footer{
     list-style: none;
     justify-content: center;
     padding-bottom: 2rem;
+    background-color: #6461FF;
+}
+
+.footer-nav li a{
+    display: block;
+    padding: 2rem 2rem 0.2rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    position: relative;
 }
 
 .footer-nav li a{
@@ -733,11 +741,12 @@ div.footer{
 
     .button2 {
         width: 60%;
-        height: auto;
+        margin-left: 19%;
     }
 
     .gototop {
-        right: 1%;
+        padding: 20px 10px;
+        margin-right: 5%;
     }
 }
 
@@ -816,10 +825,12 @@ div.footer{
     .footer-nav {
         padding-bottom: 0rem;
     }
-    
+    div.footerhead {
+        border-radius: 40px 40px 0 0;
+    }
     .gototop {
         padding: 15px 5px;
-        margin-right: 5%;
+        margin-right: 0%;
     }
     
     .button2 {
