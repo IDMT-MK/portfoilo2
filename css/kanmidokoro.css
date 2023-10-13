@@ -799,7 +799,8 @@ div.footerhead {
     }
 
     div.katei {
-        padding-top: 3rem;
+        padding-top: 30px;
+        padding-bottom: 130px;
     }
 
     div.purpose {
