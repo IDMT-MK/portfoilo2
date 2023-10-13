@@ -189,7 +189,11 @@ div.icon{
 
 div.name{
     padding-bottom: 2rem;
-    font-family: 'Inter', sans-serif;
+}
+div.name h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+div.name p {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -688,6 +692,11 @@ input, textarea {
   }
 
 /* media queries スマホ */
+
+@media screen and (min-width:480px){
+    .br-sp{display: none;}
+}
+
 @media screen and (max-width: 480px) {
     div.about {
         padding: 5rem 1.5rem;
@@ -698,6 +707,30 @@ input, textarea {
 
     div.profile {
         padding-top: 0rem;
+    }
+    div.name {
+        font-size: 15px;
+    }
+    div.name h3 {
+        font-size: 15px;
+    }
+    div.name p {
+        font-size: 13px;
+    }
+    div.college h3 { 
+        font-size: 15px;
+    }
+    div.text2 p {
+        font-size: 13px;
+    }
+    ul.syumi li {
+        font-size: 13px;
+    }
+    ul.genre li {
+        font-size: 13px;
+    }
+    div.from {
+        font-size: 13px;
     }
     div.ue{
         gap: 0;
