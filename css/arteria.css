@@ -771,6 +771,11 @@ div.footer{
 }
 
 /* media queries */
+
+@media screen and (min-width:480px){
+    .br-sp{display: none;}
+}
+
 @media screen and (max-width: 1200px) {
 
     div.result {
@@ -815,7 +820,7 @@ div.footer{
 
     div.ue {
         display: flex;
-        gap: 15%;
+        gap: 18%;
     }
 
     div.sita {
@@ -876,7 +881,7 @@ div.footer{
     }
 
     div.creation p {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     div.research h4 {
@@ -884,59 +889,59 @@ div.footer{
     }
 
     div.good {
-        width: 20%;
+        width: 30%;
     }
 
     div.good h5 {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     div.resultlist li {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     div.bad {
-        width: 20%;
+        width: 30%;
     }
 
     div.bad h5 {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     div.simbol h4 {
         font-size: 1.2rem;
     }
     div.colortable p {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     div.logotype h4 {
         font-size: 1.2rem;
     }
     div.colorcodelist2 p {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     div.comparison {
-        width: 30%;
+        width: 50%;
     }
 
     div.comparison h5 {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     div.purpose h4 {
         font-size: 1.2rem;
     }
     div.purpose p {
-        font-size: 8px;
+        font-size: 13px;
     }
 
     div.concept h4 {
         font-size: 1.2rem;
     }
     div.concept p {
-        font-size: 8px;
+        font-size: 13px;
     }
 
     div.proces h4 {
@@ -984,14 +989,14 @@ div.footer{
     }
     
     div.hyou {
-        width: 60%;
+        width: 55%;
         margin: auto;
     }
     div.hyou2 {
         margin-top: 5%;
     }
     div.usedlist2 {
-        margin-left: 48%;
+        margin-left: 30%;
     }
     div.complete {
         width: 100%;
@@ -1006,7 +1011,7 @@ div.footer{
        width: 50%;
     }
     div.research h4 {
-        font-size: 0.5rem;
+        font-size: 0.9rem;
     }
     div.resultimg {
         width: 100%;
@@ -1014,31 +1019,29 @@ div.footer{
     div.resultlist {
         margin: auto;
         width: 100%;
+        margin-bottom: 20%;
+    }
+    div.resultlist li {
+        font-size: 11px;
     }
     div.good {
         width: 30%;
     }
-    div.good h5 {
-        font-size: 10px;
-    }
+    
     ul.goodlist {
         padding: 10px 20px;
     }
     div.bad {
         width: 30%;
     }
-    div.bad h5 {
-        font-size: 10px;
-    }
+    
     ul.badlist {
         padding: 10px 20px;
     }
     div.comparison {
         width: 50%;
     }
-    div.comparison h5 {
-        font-size: 10px;
-    }
+    
     ul.comparisonlist {
         padding: 10px 20px 20px;
     }
@@ -1052,7 +1055,7 @@ div.footer{
        width: 50%;
     }
     div.simbol h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     div.logotype {
@@ -1064,7 +1067,7 @@ div.footer{
        width: 50%;
     }
     div.logotype h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     div.katei {
@@ -1074,13 +1077,22 @@ div.footer{
     div.purpose {
         padding: 15px 60px 15px 60px;
         border-right-width: 20px;
+        margin-bottom: 20%;
+        border-radius: 50px
     }
     div.concept {
         padding: 15px 60px 15px 60px;
         border-right-width: 20px;
+        border-radius: 45px
     }
     div.proces {
         width: 80%;
+    }
+    div.purpose p {
+        font-size: 11px;
+    }
+    div.concept p {
+        font-size: 11px;
     }
     .footer-nav {
         padding-bottom: 0rem;
@@ -1093,7 +1105,7 @@ div.footer{
     
     .button2 {
         width: 60%;
-        margin-left: 18%;
+        margin-left: 19%;
     }
     
     .logo2 {

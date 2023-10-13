@@ -615,6 +615,11 @@ div.footer{
 }
 
 /* media queries */
+
+@media screen and (min-width:480px){
+    .br-sp{display: none;}
+}
+
 @media screen and (max-width: 800px) {
     .main-nav {
         font-size: 0.8rem;
@@ -630,7 +635,7 @@ div.footer{
 
     div.ue {
         display: flex;
-        gap: 15%;
+        gap: 20%;
     }
 
     div.sita {
@@ -711,11 +716,11 @@ div.footer{
     }
 
     div.purpose p {
-        font-size: 8px;
+        font-size: 13px;
     }
 
     div.concept p {
-        font-size: 8px;
+        font-size: 13px;
     }
 
     div.concept h4 {
@@ -749,18 +754,19 @@ div.footer{
     }
     
     div.hyou {
-        width: 60%;
+        width: 55%;
         margin: auto;
     }
     div.hyou2 {
         margin-top: 5%;
     }
     div.usedlist2 {
-        margin-left: 22%;
+        margin-left: 32%;
     }
 
     div.complete {
         width: 100%;
+        margin-bottom: 20%;
     }
 
     div.layout2 {
@@ -776,7 +782,7 @@ div.footer{
         width: 50%;
     }
     div.layout h4 {
-        font-size: 0.5rem;
+        font-size: 0.9rem;
     }
 
     .slick-slide img {
@@ -790,14 +796,22 @@ div.footer{
     div.purpose {
         padding: 15px 60px 15px 60px;
         border-right-width: 20px;
+        margin-bottom: 20%;
+        border-radius: 50px
     }
     div.concept {
         padding: 15px 60px 15px 60px;
         border-right-width: 20px;
-        border-radius: 50px;
+        border-radius: 45px;
     }
     div.proces {
         width: 80%;
+    }
+    div.purpose p {
+        font-size: 11px;
+    }
+    div.concept p {
+        font-size: 11px;
     }
     .footer-nav {
         padding-bottom: 0rem;
@@ -810,7 +824,7 @@ div.footer{
     
     .button2 {
         width: 60%;
-        margin-left: 18%;
+        margin-left: 19%;
     }
     
     .logo2 {

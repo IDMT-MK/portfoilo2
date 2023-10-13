@@ -694,6 +694,10 @@ div.footer{
     opacity: 0;
 }
 
+@media screen and (min-width:480px){
+    .br-sp{display: none;}
+}
+
 @media screen and (max-width: 1100px) {
     div.inline-block2 {
         display: block;
@@ -877,14 +881,14 @@ div.footer{
     }
 
     div.purpose p {
-        font-size: 8px;
+        font-size: 13px;
     }
 
     div.concept h4 {
         font-size: 1.2rem;
     }
     div.concept p {
-        font-size: 8px;
+        font-size: 13px;
     }
 
     div.proces h4 {
@@ -917,14 +921,14 @@ div.main {
 }
 
 div.hyou {
-    width: 60%;
+    width: 55%;
     margin: auto;
 }
 div.hyou2 {
     margin-top: 5%;
 }
 div.usedlist2 {
-    margin-left: 20%;
+    margin-left: 25%;
 }
 div.artifact li {
     margin-left: 10%;
@@ -932,9 +936,11 @@ div.artifact li {
 
 div.complete {
     width: 100%;
+    margin-bottom: 20%;
 }
 div.mark {
     width: 100%;
+    margin-bottom: 20%;
 }
 div.symbol {
     padding: 10px;
@@ -944,7 +950,7 @@ div.symbol {
     border-left-width: 5px;
 }
 div.symbol h4 {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 div.wireframe2 {
     padding: 10px;
@@ -955,7 +961,7 @@ div.wireframe2 {
     width: 40%;
 }
 div.wireframe2 h4 {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
 }
 .wireimg {
     width: 80%;
@@ -976,7 +982,7 @@ div.sitemap{
     width: 40%;
 }
 div.sitemap1 h4 {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
 }
 .siteimg {
     width: 80%;
@@ -993,13 +999,22 @@ div.katei {
 div.purpose {
     padding: 15px 60px 15px 60px;
     border-right-width: 20px;
+    margin-bottom: 15%;
+    border-radius: 50px;
 }
 div.concept {
     padding: 15px 60px 15px 60px;
     border-right-width: 20px;
+    border-radius: 50px;
 }
 div.proces {
     width: 80%;
+}
+div.purpose p {
+    font-size: 11px;
+}
+div.concept p {
+    font-size: 11px;
 }
 .footer-nav {
     padding-bottom: 0rem;
@@ -1012,7 +1027,7 @@ div.proces {
 
 .button2 {
     width: 60%;
-    margin-left: 18%;
+    margin-left: 19%;
 }
 
 .logo2 {

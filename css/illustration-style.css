@@ -348,6 +348,10 @@ div.footer {
         font-size: 0.8rem;
     }
 
+    div.illust {
+        padding: 5rem 1.5rem 7rem;
+    }
+
     .footer-nav {
         padding-bottom: 0rem;
     }
@@ -358,7 +362,7 @@ div.footer {
 
     .button2 {
         width: 60%;
-        margin-left: 18%;
+        margin-left: 19%;
     }
 
     .logo2 {
